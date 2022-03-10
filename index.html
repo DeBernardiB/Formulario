@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario</title>
+</head>
+<body>
+        <header>
+            <h1 id="title">Formulario de Encuesta E.E.S.T N°6</h1>
+            <p id="description">Nos gustaría escuchar tu opinión acerca de cómo estamos trabajando</p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group" id="first-div">
+                <label id="name-label" for="name" required class="description-text">Nombre</label>
+                <input type="text" name="name" id="name" class="form-input" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email" class="description-text">Email</label>
+                <input type="email" name="email" id="email" class="form-input" placeholder="Ingresa tu email" required>
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="age" class="description-text">Edad</label>
+                <input type="number" name="age" id="age" class="form-input" placeholder="Edad" min="10" max="99">
+            </div>
+            <div class="form-group">
+                <p class="description-text">¿Cuál es tu relación con la escuela?<p>
+                <select name="relacion" id="dropdown" required>
+                    <option disabled selected>Selecciona una opción</option>
+                    <option value="alumno">Alumno</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="madre/padre">Padre/Madre</option>
+                    <option value="ex-alumno">Ex-alumno</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p class="description-text">¿Recomendarías nuestra escuela?</p>
+                <label for="definitivamente" class="radio-label"><input type="radio" name="recomendacion" value="definitivamente" id="definitivamente" class="input-radio">Definitivamente</label>
+                <label for="tal-vez" class="radio-label"><input type="radio" name="recomendacion" value="tal-vez" id="tal-vez" class="input-radio">Tal vez</label>
+                <label for="no-estoy-seguro" class="radio-label"><input type="radio" name="recomendacion" value="no-estoy-seguro" id="no-estoy-seguro" class="input-radio">No estoy seguro</label>
+            </div>
+            <div class="form-group">
+                <p class="description-text">¿Qué te gustaría que mejoremos?</p>
+                <label for="iluminacion" class="checkbox-label"><input type="checkbox" name="preferencias" value="iluminacion" id="iluminacion" class="input-checkbox">Iluminación</label>
+                <label for="aulas" class="checkbox-label"><input type="checkbox" name="preferencias" value="aulas" id="aulas" class="input-checkbox">Aulas</label>
+                <label for="bathroom" class="checkbox-label"><input type="checkbox" name="preferencias" value="bathroom" id="bathroom" class="input-checkbox">Baños</label>
+                <label for="mesas-sillas" class="checkbox-label"><input type="checkbox" name="preferencias" value="mesas-sillas" id="mesas-sillas" class="input-checkbox">Mesas y sillas</label>
+                <label for="computadoras" class="checkbox-label"><input type="checkbox" name="preferencias" value="computadoras" id="computadoras" class="input-checkbox">Computadoras</label>
+            </div>
+            <div class="form-group">
+                <p class="description-text">Sugerencias</p>
+                <textarea name="sugerencias" id="input-textarea" placeholder="Inserte sus sugerencias aquí..."></textarea>
+            </div>
+            <div class="form-group" id="last-div">
+                <button type="submit" id="submit-button">Enviar</button>
+            </div>
+        </form>
+</body>
+</html>
